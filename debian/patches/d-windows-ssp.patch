@@ -1,0 +1,13 @@
+Bug: https://github.com/rust-lang/rust/issues/68973
+
+--- a/compiler/rustc_target/src/spec/windows_gnu_base.rs
++++ b/compiler/rustc_target/src/spec/windows_gnu_base.rs
+@@ -38,6 +38,8 @@
+         "-lmsvcrt".to_string(),
+         "-luser32".to_string(),
+         "-lkernel32".to_string(),
++        "-lssp_nonshared".to_string(),
++        "-lssp".to_string(),
+     ];
+     late_link_args.insert(LinkerFlavor::Gcc, mingw_libs.clone());
+     late_link_args.insert(LinkerFlavor::Lld(LldFlavor::Ld), mingw_libs);

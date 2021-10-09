@@ -1,0 +1,10 @@
+Bug: https://github.com/rust-lang/rust/pull/55667
+--- a/src/test/ui/issues/issue-44056.rs
++++ b/src/test/ui/issues/issue-44056.rs
+@@ -1,5 +1,5 @@
+ // build-pass (FIXME(55996): should be run on targets supporting avx)
+-// only-x86_64
++// ignore-test
+ // no-prefer-dynamic
+ // compile-flags: -Ctarget-feature=+avx -Clto
+ 
