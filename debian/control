@@ -155,7 +155,7 @@ Description: Rust standard libraries - development files
 ## Embeds wasi-libc so doesn't need to depend on it
 # None of its licenses require source redistrib, so no need for Built-Using
 #Recommends:
- #lld-12, clang-12,
+# lld-12, clang-12,
 #Suggests:
 ## nodejs contains wasi-node for running the program
 # nodejs (>= 12.16),
