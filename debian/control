@@ -35,8 +35,8 @@ Build-Depends:
 # below are optional tools even for 'make check'
  gdb (>= 7.12) <!nocheck>,
 # Extra build-deps needed for x.py to download stuff in pkg.rustc.dlstage0.
- curl,
- ca-certificates
+ curl <pkg.rustc.dlstage0>,
+ ca-certificates <pkg.rustc.dlstage0>,
 Build-Depends-Indep:
 # wasi-libc (>= 0.0~git20201130.5879558~~) <!nowasm>,
 # wasi-libc (<= 0.0~git20201130.5879558++) <!nowasm>,
