@@ -1,3 +1,12 @@
+rustc (1.54.0+dfsg1-3+atari3) vcs; urgency=medium
+
+  * Run a normal build again now things are bootstrapped
+  * Remaining changes:
+    - Disable windows cross-compiler
+    - Disable wasi support
+
+ -- Sjoerd Simons <sjoerd@collabora.com>  Tue, 12 Oct 2021 15:47:33 +0200
+
 rustc (1.54.0+dfsg1-3+atari1) vcs; urgency=medium
 
   * Disable wasi and windows build

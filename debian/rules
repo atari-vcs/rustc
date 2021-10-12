@@ -73,7 +73,7 @@ ifeq (0,$(HAVE_BINARY_TARBALL))
     #
     # Case A-1: the builder did not select the "pkg.rustc.dlstage0" build profile.
     # In this case, we use the distro's rustc - either the previous or current version.
-    ifeq (force_dlstage0,$(findstring pkg.rustc.dlstage0,$(DEB_BUILD_PROFILES)))
+    ifeq (,$(findstring pkg.rustc.dlstage0,$(DEB_BUILD_PROFILES)))
         # Make it easier to test against a custom rustc
         ifneq (,$(RUST_DESTDIR))
         RUST_LIBRARY_PATH := $(RUST_DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH):$(RUST_DESTDIR)/usr/lib
