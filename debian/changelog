@@ -1,3 +1,10 @@
+rustc (1.54.0+dfsg1-3+atari1) vcs; urgency=medium
+
+  * Disable wasi and windows build
+  * Force a stage0 bootstrap build
+
+ -- Sjoerd Simons <sjoerd@collabora.com>  Tue, 12 Oct 2021 08:54:16 +0200
+
 rustc (1.54.0+dfsg1-3+apertis0) atari; urgency=medium
 
   * Import from Debian sid.

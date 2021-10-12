@@ -73,7 +73,7 @@ ifeq (0,$(HAVE_BINARY_TARBALL))
     #
     # Case A-1: the builder did not select the "pkg.rustc.dlstage0" build profile.
     # In this case, we use the distro's rustc - either the previous or current version.
-    ifeq (,$(findstring pkg.rustc.dlstage0,$(DEB_BUILD_PROFILES)))
+    ifeq (force_dlstage0,$(findstring pkg.rustc.dlstage0,$(DEB_BUILD_PROFILES)))
         # Make it easier to test against a custom rustc
         ifneq (,$(RUST_DESTDIR))
         RUST_LIBRARY_PATH := $(RUST_DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH):$(RUST_DESTDIR)/usr/lib
@@ -111,13 +111,13 @@ ifneq (,$(findstring nodoc,$(DEB_BUILD_OPTIONS)))
   BUILD_DOCS := false
 endif
 
-BUILD_WASM := true
+BUILD_WASM := false
 ifneq (,$(findstring nowasm,$(DEB_BUILD_PROFILES)))
   BUILD_WASM := false
 endif
 
 WINDOWS_SUPPORT := amd64 i386
-BUILD_WINDOWS := true
+BUILD_WINDOWS := false
 ifneq (,$(findstring nowindows,$(DEB_BUILD_PROFILES)))
   BUILD_WINDOWS := false
 endif
